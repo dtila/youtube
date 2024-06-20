@@ -23,21 +23,21 @@ public class ValueObjectsBenchmark
 
     [BenchmarkCategory("Equals"), Benchmark(Baseline = true)]
     [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-    public void Record_Equals()
+    public void RecordClass_Equals()
     {
         var x = valueRecord1.Equals(valueRecord2);
     }
 
     [BenchmarkCategory("Equals"), Benchmark]
     [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-    public void ValueObject_Equals()
+    public void ValueObjectClass_Equals()
     {
         var x = valueObject1.Equals(valueObject2);
     }
 
     [BenchmarkCategory("Equals"), Benchmark]
     [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-    public void ValueObjectWithStruct_Equals()
+    public void ValueObjectClassWithBoxing_Equals()
     {
         var x = gpsValueObject1.Equals(gpsValueObject2);
     }
@@ -46,25 +46,25 @@ public class ValueObjectsBenchmark
 
     [BenchmarkCategory("GetHashCode"), Benchmark(Baseline = true)]
     [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-    public void Record_GetHashCode()
+    public void RecordClass_GetHashCode()
     {
-        valueRecord1.GetHashCode();
-        valueRecord2.GetHashCode();
+        var x = valueRecord1.GetHashCode();
+        var y = valueRecord2.GetHashCode();
     }
 
     [BenchmarkCategory("GetHashCode"), Benchmark]
     [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-    public void ValueObject_GetHashCode()
+    public void ValueObjectClass_GetHashCode()
     {
-        valueObject1.GetHashCode();
-        valueObject2.GetHashCode();
+        var x = valueObject1.GetHashCode();
+        var y = valueObject2.GetHashCode();
     }
 
     [BenchmarkCategory("GetHashCode"), Benchmark]
     [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
-    public void ValueObjectWithStruct_GetHashCode()
+    public void ValueObjectClassWithSBoxing_GetHashCode()
     {
-        gpsValueObject1.GetHashCode();
-        gpsValueObject2.GetHashCode();
+        var x = gpsValueObject1.GetHashCode();
+        var y = gpsValueObject2.GetHashCode();
     }
 }
