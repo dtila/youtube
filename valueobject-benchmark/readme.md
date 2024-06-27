@@ -5,7 +5,7 @@ Benchmark with 2 different implementations of the ValueObject pattern from DDD:
 2. Use *record* keyword from C# 9
 
 I see 5 reasons why you should not use the ValueObject base class and I explain in this video:
-[![View on YouTube](https://img.youtube.com/vi/lp69S1yDiJY/0.jpg)](https://youtu.be/lp69S1yDiJY)
+[![View on YouTube](https://img.youtube.com/vi/xXpGJHCfY6o/0.jpg)](https://youtu.be/xXpGJHCfY6o)
 
 
 In the benchmark there are 3 scenarios:
