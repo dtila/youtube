@@ -5,13 +5,13 @@ Benchmark with 2 different implementations of the ValueObject pattern from DDD:
 2. Use *record* keyword from C# 9
 
 I see 5 reasons why you should not use the ValueObject base class and I explain in this video:
-[![View on YouTube](https://img.youtube.com/vi/xXpGJHCfY6o/0.jpg)](https://youtu.be/xXpGJHCfY6o)
+[![View on YouTube](https://img.youtube.com/vi/jYFodfPxF70/0.jpg)](https://youtu.be/jYFodfPxF70)
 
 
 In the benchmark there are 3 scenarios:
 1. The record class			
 2. The *ValueObject* instance with all the properties reference types
-3. The *ValueObject* instance with some properties value types (to ilustrate boxing)
+3. The *ValueObject* instance with some properties value types (to illustrate boxing)
 
 ## Results
 
