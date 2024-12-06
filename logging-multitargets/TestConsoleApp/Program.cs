@@ -13,11 +13,14 @@ namespace TestConsoleApp
 
 
 
-    internal static partial class OutboxLoggers
+    internal static partial class generatedLoggers
     {
-        [LoggerMessage(Level = LogLevel.Information, Message = "OutboxBackgroundService starting...")]
-        internal static partial void LogStarting(this ILogger logger);
+        [LoggerMessage(EventId = 1, Level = LogLevel.Information, Message = "Message 1")]
+        internal static partial void MyInfo(this ILogger logger);
 
+
+        [LoggerMessage(EventId = 2, Level = LogLevel.Trace, Message = "Message 2")]
+        internal static partial void MyDebug(this ILogger logger);
     }
 }
 
